@@ -1,55 +1,50 @@
-int? getIdade(bool found) {
+Future<String?> getName(bool found) async {
+  // await Future.delayed(Duration(seconds: 5));
   if (found) {
-    return 20;
-  } else {
-    return null;
-  }
-}
-
-Future<String?> getnome(bool found) async {
-  // await AcessarOBanco()
-  await Future.delayed(Duration(seconds: 0));
-  if (found) {
-    return 'Vitor';
+    return 'Vítor';
   } else {
     return null;
   }
 }
 
 void main() async {
-  int? idade = getIdade(true);
-  if (idade == null) {
-    idade = 30;
-  }
-  int idadeReal = idade;
+  String? isName = await getName(true);
+  String name;
+  name = isName ?? "Não encontrei o usuário";
+  // name = isName!;
+  // if (isName == null) {
+  //   name = 'Não encontrei o usuário';
+  // } else {
+  //   name = isName;
+  // }
 
-  // String? nome = getnome(false);
-  String? nome = await getnome(false);
-  // String nomeReal = nome!;
-  String nomeReal = nome ?? "Sem nome";
-  print(nomeReal);
+  // print(name);
 
-  User Vitor = User(username: 'vitor', idade: 20);
-  print(Vitor.idade);
-  Vitor.incrementIdade();
-  print(Vitor.idade);
+  User vitor = User(name: "Vítor", dataDeNascimento: "10/03/2002", peso: 60.4);
+
+  print(vitor.peso);
+  vitor.incrementPeso();
+  print(vitor.peso);
 }
 
 class User {
-  final String username; // Obrigatório
-  bool isMale; // Padrao
-  int idade; // Obrigatório
-  double? altura; // Opcional
+  final String name; //Obrigatorio
+  final String dataDeNascimento; //Obrigatorio
+  double? peso; // opcional
+  double? altura; // altura
+  final bool isMale; //padrao
+
   User({
-    required this.username,
-    this.isMale = true,
-    required this.idade,
+    required this.name,
+    required this.dataDeNascimento,
+    this.peso,
     this.altura,
+    this.isMale = true,
   });
 
-  // User({required this.username, this.isMale = true, this.idade, this.altura});
-
-  incrementIdade() {
-    idade++;
+  void incrementPeso() {
+    if (peso != null) {
+      peso = peso! + 1;
+    }
   }
 }
