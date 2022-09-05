@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(MeuApp());
@@ -10,58 +10,50 @@ class MeuApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Fundamentos"),
+          title: const Text("Meu Primeiro App"),
           centerTitle: true,
         ),
         body: Column(
           children: [
+            Image.asset("assets/muro.jpg"),
+
+            // Descrição
             Container(
-              height: 100,
-              width: 100,
-              color: Colors.yellow,
-            ),
-            // SizedBox(height: 10),
-            Container(
-              margin: EdgeInsets.only(top: 10, bottom: 10),
-              height: 100,
-              width: 200,
-              color: Colors.green,
-            ),
-            // SizedBox(height: 10),
-            Text("Text normal"),
-            Image.asset("assets/mario.jpg"),
-            SizedBox(height: 10),
-            TextButton(
-              onPressed: () {
-                print('clicou');
-              },
+              margin: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.home, color: Colors.blue),
-                  Text("Botão"),
+                  // Texto de descrição e localização
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Muro das lamentações',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text('Jerusálem, Israel'),
+                    ],
+                  ),
+
+                  // Avaliação e likes
+                  Row(
+                    children: [
+                      Icon(Icons.star, color: Colors.yellow),
+                      Text('9.876'),
+                    ],
+                  ),
                 ],
               ),
             ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                color: Colors.blue,
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: Color.fromARGB(255, 185, 242, 27),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    MeuBotao(icon: Icons.add, title: "Adicionar"),
-                    MeuBotao(icon: Icons.home, title: "Home"),
-                    MeuBotao(icon: Icons.help, title: "Ajuda"),
-                  ],
-                ),
-              ),
+            // Botoes sociais
+            Row(children: [
+              MeuBotao(icon: Icons.phone, title: 'Ligar'),
+              MeuBotao(icon: Icons.gps_fixed_outlined, title: 'Endereço'),
+              MeuBotao(icon: Icons.share, title: 'Compartilhar'),
+            ]),
+            // Texto
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(
+                  'Contrary to popular belief, Lorem IpsContrary to popular belief, Lorem IpsContrary to popular belief, Lorem IpsContrary to popular belief, Lorem IpsContrary to popular belief, Lorem IpsContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lore'),
             ),
           ],
         ),
@@ -83,16 +75,17 @@ class MeuBotao extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: TextButton(
-          onPressed: () {
-            print('clicou em $title');
-          },
+        onPressed: () {},
+        child: Container(
+          padding: EdgeInsets.only(top: 15, bottom: 15),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(icon),
               Text(title),
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }

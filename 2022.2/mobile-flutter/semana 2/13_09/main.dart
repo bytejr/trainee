@@ -1,7 +1,7 @@
 Future<String?> getName(bool found) async {
   // await Future.delayed(Duration(seconds: 5));
   if (found) {
-    return 'Vítor';
+    return 'Vitor';
   } else {
     return null;
   }
@@ -11,7 +11,6 @@ void main() async {
   String? isName = await getName(true);
   String name;
   name = isName ?? "Não encontrei o usuário";
-  // name = isName!;
   // if (isName == null) {
   //   name = 'Não encontrei o usuário';
   // } else {
@@ -30,10 +29,9 @@ void main() async {
 class User {
   final String name; //Obrigatorio
   final String dataDeNascimento; //Obrigatorio
-  double? peso; // opcional
-  double? altura; // altura
-  final bool isMale; //padrao
-
+  double? peso; //opcional
+  double? altura; //opcional
+  final bool isMale; //padrão
   User({
     required this.name,
     required this.dataDeNascimento,
