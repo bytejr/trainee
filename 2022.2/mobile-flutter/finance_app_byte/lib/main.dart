@@ -1,3 +1,4 @@
+import 'package:finance_app_byte/modules/home/home_page.dart';
 import 'package:finance_app_byte/modules/signup/signup_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class MeuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Signup_Page(),
+      home: HomePage(),
     );
   }
 }
