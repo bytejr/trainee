@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Radio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/d8de9a7660.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="content-container">
+        <header class="header">
+          Radio Byte Jr.
+          <i class="fa-solid fa-radio"></i>
+        </header>
+
+        <main>
+          <img 
+            src="public/assets/stations/default.png" 
+            alt="radio background image"
+            class="img"
+            id="img"
+          >
+
+          <h3 class="current-station">
+            <span class="current-station-number" id="station-number">97.1</span>
+            <span id="station-text"> -  Rádio Oceano</span>
+          </h3>
+
+          <input 
+            type="range"
+            class="input"
+            id="range-input"
+            min="94"
+            max="104"
+            step="0.1"
+            focused="true"
+          />
+
+          <div class="amfm-container">
+            <i class="fa-solid fa-backward-fast"></i>
+            <div class="amfm">
+              <span class="selected">FM</span>
+              <span>AM</span>
+            </div>
+            <i class="fa-solid fa-forward-fast"></i>
+          </div>
+
+        </main>
+
+        <footer>
+          <img 
+            src="public/assets/byte.png" 
+            alt="octógono da byte" 
+            class="logo" 
+          />
+          Projeto Trainee 2022/2
+        </footer>
+
+      </div>
+      
+      <div>
+        <img src="public/assets/background/bottomleft.svg" alt="background bubble" class="bubble bottomleft">
+        <img src="public/assets/background/middle.svg" alt="background bubble" class="bubble middle">
+        <img src="public/assets/background/right.svg" alt="background bubble" class="bubble right">
+        <img src="public/assets/background/topleft.svg" alt="background bubble" class="bubble topleft">
+      </div>
+    </div>
+
+  </body>
+
+<html>

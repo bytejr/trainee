@@ -1,0 +1,14 @@
+.inputs{
+  /* estilizar a div dos inputs da sua preferência */
+}
+
+input + input{
+  margin-top: 1rem;
+}
+
+.display{
+  /* width: 100px;
+  height: 100px; */
+  /* estilizar a div que mostrará a cor, da sua preferência */
+  /* A cor de fundo deve ser preta, pois os inputs iniciam com 0 */
+}
