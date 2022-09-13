@@ -27,7 +27,7 @@ void main() {
   if (a == preco) {
     print('A é igual ao preço');
   } else {
-    print('A é diferente do preço');
+    print("A é diferente do preço");
   }
   switch (a) {
     case 1:
