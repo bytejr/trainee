@@ -1,0 +1,196 @@
+/* 1rem = 16px */
+
+/* Base variables */
+:root{
+  --background: #F3EFEA;
+  --dark: #3E3E3E;
+  --theme: #FEB388;
+}
+
+/* Common styles for all components */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Lato', sans-serif;
+}
+
+/* Outer container, which holds de application and backgrond bubbles */
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Main container, which holds the application itself */
+.content-container{
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 1.4rem 5rem;
+
+  position: absolute;
+  z-index: 1;
+}
+
+/* Header */
+.header{
+  width: 14rem;
+  height: 10vh;
+  border-radius: 1.6rem;
+  background: var(--dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.4rem;
+  color: var(--theme);
+}
+
+/* Header icon */
+.icon{
+  margin-left: 1rem;
+}
+
+
+/* Main application */
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+/* Station image */
+.img{
+  width: 45vw;
+  height: 40vh;
+  border-radius: 2rem;
+  border: 0.25rem solid var(--dark);
+}
+
+/* Station info */
+.current-station{
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 1rem 0 0;
+}
+
+/* Station number */
+.current-station-number{
+  font-size: 1.8rem;
+}
+
+/* Range input */
+.input{
+  -webkit-appearance: none;
+  width: 60vw;
+  margin-top: 1rem;
+  outline: none;
+  background: transparent;
+}
+
+.input::-webkit-slider-runnable-track{
+  width: 100%;
+  height: 0.6rem;
+  background: var(--dark);
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.input:hover::-webkit-slider-runnable-track{
+  background: #515151;
+}
+
+.input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 2.25rem;
+  width: 0.75rem;
+  border-radius: 1rem;
+  background: var(--theme);
+  cursor: pointer;
+  margin-top: -0.875rem;
+}
+
+/* AFMD container */
+.amfm-container{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* AMFM iteself */
+.amfm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+  line-height: 1.2rem;
+}
+
+/* AM FM which is select */
+.selected{
+  color: var(--theme)
+}
+
+
+/* Footer */
+.footer{
+  width: 80vw;
+  height: 10vh;
+  border-radius: 1.6rem;
+  background: var(--dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  font-size: 1.4rem;
+  color: var(--theme);
+
+  margin: auto auto 0;
+  padding: 0 1.4rem;
+}
+
+/* Byte logo */
+.logo{
+  height: 8vh;
+}
+
+/* All bubbles */
+.bubble{
+  position: absolute;
+  width: 20rem;
+}
+
+.bottomleft{
+  bottom: -7.5rem;
+  left: -4rem;
+}
+
+.middle{
+  bottom: 2rem;
+  left: 26rem;
+}
+
+.right{
+  right: 0;
+  top: -2rem;
+  width: 16rem;
+}
+
+.topleft{
+  top: 0;
+  left: 0;
+  width: 24rem;
+}
