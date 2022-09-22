@@ -1,0 +1,24 @@
+@import '../../styles/vars.scss';
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 96vw;
+  max-width: 1844px;
+  height: 10vh;
+
+  padding: 0 1.4rem;
+  margin: auto auto 3vh;
+  border-radius: 0.25rem;
+
+  background: $white;
+
+  img{ width: 3rem; }
+
+  h4{
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+}

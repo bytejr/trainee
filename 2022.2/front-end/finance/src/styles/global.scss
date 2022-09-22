@@ -1,0 +1,36 @@
+@import './vars.scss';
+
+// padding = espaçamento interno
+// margin = espaçamento externo
+
+// padding: 0;                 // all dimensions
+// padding: 0 1rem;            // 0 top/bottom, 1rem left/right
+// padding: 0 1rem 2rem;       // 0 top, 1rem left/right, 2rem bottom
+// padding: 0 1rem 2rem 3rem;  // 0 top, 1rem right, 2rem bottom, 3rem left    
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: Poppins, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,span,a,svg{
+  color: $dark;
+}
+
+button,a{
+  cursor: pointer;
+}
+
+fieldset{
+  outline: none;
+  border: 0;
+}
+
+.div{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
