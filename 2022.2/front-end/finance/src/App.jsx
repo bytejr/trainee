@@ -1,15 +1,11 @@
-import { Header } from './components/Header'; 
-import { Footer } from './components/Footer';
+import { Login } from './pages/Login';
 
 import './styles/global.scss';
 
 function App() {
 
   return (
-    <div className="div">
-      <Header/>
-      <Footer/>
-    </div>
+    <Login/>
   )
 }
 
