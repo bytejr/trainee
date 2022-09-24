@@ -1,0 +1,151 @@
+@import '../../../styles/vars.scss';
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal{
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  bottom: 20vh;
+  right: 20vw;
+
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 2rem;
+
+  background: $white;
+  outline: none;
+
+  form{
+    display: flex;
+    flex-direction: column;
+
+    header{
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+      height: 20%;
+      padding: 0.4rem 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid $dark;
+
+      h4{
+        font-size: 1.2rem;
+      }
+
+      div{
+        display: flex;
+
+        button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          height: 2.4rem;
+          padding: 0.25rem;
+          border: 0;
+          border-radius: 0.25rem;   
+          
+          font-size: 1rem;
+          color: $white;
+
+          transition: background 0.25s;
+
+          &:hover{
+            background: $dark;
+            svg{ color: $white; }
+          }
+
+          svg{
+            font-size: 1.4rem;
+          }
+        }
+
+        .add{
+          width: 10rem;
+          margin-right: 1rem;
+          background: #43465B;
+          svg{
+            margin-right: 0.25rem;
+            color: $white;
+          }
+        }
+
+        .close{
+          width: 3.6rem;
+          background: transparent;
+          border: 3px solid $dark;
+          svg{
+            color: $dark;
+          }
+        }
+      }
+    }
+    
+    .first-fieldset{
+      display: flex;
+      align-items: center;
+
+      input{
+        -webkit-appearance: none;
+        margin: 0 1rem;
+        width: 3.6rem;
+        outline: none;
+        background: transparent;
+
+        &::-webkit-slider-runnable-track{
+          width: 100%;
+          height: 1.6rem;
+          border-radius: 1rem;
+          padding: 0 0.25rem;
+          background: #E99696;
+
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+
+        &.green::-webkit-slider-runnable-track{
+          background: #B9F3A6;
+        }
+
+        &:hover::-webkit-slider-runnable-track{
+          opacity: 0.95;
+        }
+
+        &::-webkit-slider-thumb{
+          -webkit-appearance: none;
+          width: 1.3rem;
+          height: 1.3rem;
+          border-radius: 50%;
+          background: $dark;
+          margin-top: 0.15rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .second-fieldset{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      width: 60%;
+      margin-top: 2rem;
+
+      input{
+        height: 2.4rem;
+        padding: 0 1rem;
+        border: 0;
+        border-radius: 0.25rem;
+        outline:  1px solid $dark;
+      }
+    }
+  }
+}

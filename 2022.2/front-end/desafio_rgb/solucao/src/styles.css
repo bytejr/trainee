@@ -1,0 +1,16 @@
+.inputs{
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+
+input + input{
+  margin-top: 1rem;
+}
+
+.display{
+  width: 10rem;
+  height: 10rem;
+  background: black;
+  margin-top: 2rem;
+}

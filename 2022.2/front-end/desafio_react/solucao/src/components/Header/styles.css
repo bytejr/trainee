@@ -1,0 +1,9 @@
+header{
+  height: 10vh;
+  border-radius: 0.5rem;
+  background: yellow;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

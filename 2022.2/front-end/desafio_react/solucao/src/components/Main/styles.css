@@ -1,0 +1,9 @@
+main{
+  height: 80vh;
+  border-radius: 0.5rem;
+  background: blue;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
