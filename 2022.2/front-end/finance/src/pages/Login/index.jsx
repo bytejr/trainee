@@ -1,12 +1,24 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Header } from '../../components/Header'; 
 import { Footer } from '../../components/Footer';
 
 import './styles.scss';
 
 export function Login(){
+  const navigate = useNavigate();
+
+  function handleLogin(e){
+    e.preventDefault();
+    navigate('/dashboard');
+  }
+
   return(
     <div className="login-container">
-      <Header/>
+      <Header
+        email="Login"
+        name="Cadastre-se"
+      />
 
       <main className="login-content">
 
@@ -16,20 +28,20 @@ export function Login(){
           <p>finanças em qualquer lugar</p>
         </div>
 
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           <label htmlFor="email">
             <span>E-mail</span>
-            <input type="text" id="email" />
+            <input type="email" id="email" required/>
           </label>
 
           <label htmlFor="password">
             <span>Senha</span>
-            <input type="text" id="password" />
+            <input type="text" id="password" required/>
           </label>
 
           <label htmlFor="password-confirmation">
             <span>Confirmação da senha</span>
-            <input type="text" id="password-confirmation" />
+            <input type="text" id="password-confirmation" required/>
           </label>
 
           <fieldset>
